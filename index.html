@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+ <html> 
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <meta name="viewport" content="width=1024">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+
+
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+
+
+  <body>
+
+
+    <!-- Header Nav -->
+    <div class="header-nav">
+      <a href="#" class="header-nav-logo"><img src="./img/govlytics-logo.png"></a>
+      <div class="header-nav-account">
+        <p class="account-name small-caps">Peter Parker</p><i class="fa fa-chevron-down"></i>
+      </div>
+    </div><!-- End Header Nav -->
+
+    <!-- Header Control -->
+    <div class="header-control">
+      <div class="header-control-dataset-name">
+        <h1>New Dataset</h1>
+      </div><!-- End Header Control Dataset Name-->
+      <div class="header-control-buttons">
+        <button class="small-caps grey-button"><i class="fa fa-floppy-o"></i>SAVE DATASET</button>
+        <button class="small-caps grey-button"><i class="fa fa-bar-chart"></i>CHART DATASET</button>
+        <button class="small-caps grey-button"><i class="fa fa-cloud-download"></i></i>EXPORT</button>
+        <button class="small-caps grey-button"><i class="fa fa-share-alt"></i></i>SHARE</button>
+      </div><!-- End Header Control Buttons -->
+    </div><!-- End Header Control -->
+
+    <!-- Table Options -->
+    <div class="table-options">
+      <div href="#menu-toggle" id="menu-toggle" class="table-option-box table-options-show-filters">
+        <i class="fa fa-filter"></i><span class="small-caps">SHOW FILTERS</span>
+      </div><!-- End Show Filters-->
+      <div class="table-option-box table-options-search">
+        <input type="text" class="form-control search-box" placeholder="Search">
+      </div><!-- End Search -->
+      <div class="table-option-box table-options-show-columns">
+        <span class="dark-p-text">Showing 24 of 40 columns</span><i class="fa fa-chevron-down"></i>
+      </div><!-- End Show Columns -->
+      <div class="table-options-showing-rows">
+        <span class="dark-p-text">Showing 1375 of 40126 rows</span>
+      </div><!-- End Showing Rows -->
+    </div>
+
+    <!-- Active Filters -->
+    <div class="active-filters-bar">
+      <div class="active-filter">
+        <span class="dark-p-text"><span class="bold">Vendor</span> contains any of <span class="bold">Lockheed Martin</span></span><i class="fa fa-times"></i>
+      </div><!-- End Active Filter-->
+      <div class="active-filter">
+        <span class="dark-p-text"><span class="bold">Vendor</span> contains any of <span class="bold">Lockheed Martin</span></span><i class="fa fa-times"></i>
+      </div><!-- End Active Filter-->
+      <div class="active-filter">
+        <span class="dark-p-text"><span class="bold">Vendor</span> contains any of <span class="bold">Lockheed Martin</span></span><i class="fa fa-times"></i>
+      </div><!-- End Active Filter-->
+    </div>
+
+
+    <!-- NOTE: consider a LIST for recurring content like active filters and filter categories/options (because) --> 
+    <!-- Filter Menus --> 
+    <div id="wrapper">
+      <div class="filters-menu-wrapper" id="sidebar-wrapper">
+        <div class="filter-category">
+        </div><!-- End Filter category -->
+        <div class="filter-category">
+        </div><!-- End Filter category -->
+        <div class="filter-category">
+        </div><!-- End Filter category -->
+        <div class="filter-category">
+        </div><!-- End Filter category -->
+        <div class="filter-category">
+        </div><!-- End Filter category -->
+        <div class="filter-category">
+        </div><!-- End Filter category -->
+      </div><!-- End Filters menu-->
+
+      <!-- Extended Filter Menu -->
+      <div class="extended-filter">
+        <div class="filter-header">
+        </div><!-- End Filter Header -->
+        <div class="filter-search">
+        </div><!-- End Filter Search -->
+        <div class="filter-options">
+        </div><!-- End Filter Options -->
+        <div class="filter-options">
+        </div><!-- End Filter Options -->
+        <div class="filter-options">
+        </div><!-- End Filter Options -->
+        <div class="filter-options">
+        </div><!-- End Filter Options -->
+        <div class="filter-options">
+        </div><!-- End Filter Options -->
+
+      </div><!-- End Filters menu-->
+
+      <!-- Table -->
+      <div id="page-content-wrapper">
+        <div class="data-table">
+          <h1> Hello </h1>
+          <p> yello jello </p>
+          
+        </div>
+      </div>
+
+
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+  </body>
+
+</html>
