@@ -49,11 +49,41 @@
         <i class="fa fa-filter"></i><span class="small-caps">SHOW FILTERS</span>
       </div><!-- End Show Filters-->
       <div class="table-option-box table-options-search">
-        <input type="text" class="form-control search-box" placeholder="Search">
+        <input type="text" class="form-control search-box" placeholder="&#xF002;  Search" style="font-family: opensans-reg, FontAwesome">
       </div><!-- End Search -->
-      <div class="table-option-box table-options-show-columns">
-        <span class="dark-p-text">Showing 24 of 40 columns</span><i class="fa fa-chevron-down"></i>
-      </div><!-- End Show Columns -->
+      <div class="btn-group table-option-box table-options-show-columns">
+        <div class="show-columns-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="dark-p-text">Showing 24 of 40 columns</span><i class="fa fa-chevron-down"></i>
+        </div><!-- End Show Columns -->
+        <div class="dropdown-menu">
+          <div class="filter-option-search">
+            <input type="text" class="form-control search-box" placeholder="&#xF002;  Search" style="font-family: opensans-reg, FontAwesome" />
+          </div><!-- End Search -->
+
+          <div class="panel-body">
+            <ul class="filter-list filter-departments">
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">All Departments</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">All columns</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+              <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Column A</span></li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
       <div class="table-options-showing-rows">
         <span class="dark-p-text">Showing 1375 of 40126 rows</span>
       </div><!-- End Showing Rows -->
@@ -83,27 +113,49 @@
 
 
         <div class="filters-menu panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
           <div class="filter-category panel panel-default">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="filter-category-title">
-                    Vendor                  
+                    Departments/Agencies/Offices                  
                 </h4>
                 <i class="fa fa-chevron-down"></i>
               </div>
             </a>
             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div class="filter-option-search">
+                <input type="text" class="form-control search-box" placeholder="&#xF002;  Search" style="font-family: opensans-reg, FontAwesome" />
+              </div><!-- End Search -->
+
               <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <ul class="filter-list filter-departments">
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">All Departments</span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                  <li><input type="checkbox" class="filter-checkbox" value="first_checkbox"><span class="filter-name">Department A</span><span class="filter-open-more">All Agencies & Offices<i class="fa fa-chevron-right"></i></span></li>
+                </ul>
+                
               </div>
             </div>
           </div>
-          <div class="filter-category panel panel-default">
+
+          <div class="filter-category category-currency category-larger-padding panel panel-default">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="filter-category-title">
                   
-                    Collapsible Group Item #2
+                    Obligated Amount
                   
                 </h4>
                 <i class="fa fa-chevron-down"></i>
@@ -111,16 +163,44 @@
             </a>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                <div class="dropdown inline-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Include
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Include</a></li>
+                    <li><a href="#">Exclude</a></li>
+                  </ul>
+                </div>
+
+                <span>rows where <span class="bold">Obligated Amount</span> is:</span>
+
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Greater than (>) <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">less than (<)</a></li>
+                      <li><a href="#">greater than or equal to (>=)</a></li>
+                      <li><a href="#">less than or equal to (<=)</a></li>
+                      <li><a href="#">between</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                  <input type="text" class="form-control" aria-label="...">
+                </div>
+
+                <button class="small-caps grey-button add-filter-button"><i class="fa fa-plus"></i>ADD FILTER</button>
+
               </div>
             </div>
           </div>
-          <div class="filter-category panel panel-default">
+          <div class="filter-category category-larger-padding panel panel-default">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="filter-category-title">
                   
-                    Collapsible Group Item #3
+                    Vendor
                   
                 </h4>
                 <i class="fa fa-chevron-down"></i>
@@ -128,10 +208,40 @@
             </a>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
               <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                <div class="dropdown inline-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Include
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Include</a></li>
+                    <li><a href="#">Exclude</a></li>
+                  </ul>
+                </div>
+                <span>rows where <span class="bold">Vendor</span> contains:</span>
+
+                <div class="dropdown top-space">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    any of these
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">any of these</a></li>
+                    <li><a href="#">all of these</a></li>
+                  </ul>
+                </div>
+
+                <div class="text-input top-space">
+                  <input type="text" class="form-control" placeholder="Add filter term" />
+                </div>
+
+                <button class="small-caps grey-button add-filter-button"><i class="fa fa-plus"></i>ADD FILTER</button>
+
               </div>
             </div>
           </div>
+
           <div class="filter-category panel panel-default">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               <div class="panel-heading" role="tab" id="headingThree">

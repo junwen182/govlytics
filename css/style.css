@@ -81,6 +81,12 @@ table {
 
 html, body {
   height: 100%;
+  color: #4c4c4c;
+}
+
+span {
+  font-size: 12px;
+  font-family: opensans-reg;
 }
 
 h2 {
@@ -117,7 +123,6 @@ body {
   width: 100%;
   background-color: #F5F6F6;
 }
-
 
 .white-bg {
   background-color: #ffffff;
@@ -240,7 +245,22 @@ html, html a {
 }
 .table-options-show-columns {
   width: 280px;
+}
+.show-columns-button {
   padding: 10px 20px;
+}
+.table-options-show-columns .dropdown-menu {
+  width: 280px;
+  border-radius: 0;
+  border: 1px solid #d7d7d7;
+  top: 38px;
+  padding: 0;
+}
+.table-options-show-columns .dropdown-menu .filter-option-search {
+  padding: 6px;
+}
+.table-options-show-columns .panel-body {
+  padding-bottom: 0;
 }
 .dark-p-text {
   font-family: opensans-reg;
@@ -480,9 +500,11 @@ html, html a {
 #wrapper .panel-group .filter-category .panel-heading {
   padding: 20px 20px 20px 30px;
 }
-#wrapper .panel-group .filter-category .panel-body {
-  padding: 20px 30px;
+.panel-body {
+  padding: 15px;
   border-top: 1px solid #d7d7d7;
+  max-height: 300px;
+  overflow-y: auto;
 }
 .filter-category-title {
   font-family: opensans-semibold;
@@ -494,11 +516,69 @@ html, html a {
   float: right;
   color: #999999;
 }
+.filter-category button, .filter-category input {
+  border-radius: 3px;
+}
 
 
+/* Options within each filter category */
+.filters-menu-wrapper .filter-option-search {
+  padding: 6px;
+  border-top: 1px solid #d7d7d7;
+}
+.filter-option-search .search-box {
+  margin: 0;
+  width: 100%;
+}
 
 
+/* category: term */
+.filter-list li {
+  margin-bottom: 15px;
+  position: relative;
+}
+input.filter-checkbox {
+  margin-right: 8px;
+  margin-top: 0;
+}
+.filter-name {
+  font-family: opensans-reg;
+  font-size: 12px;
+}
+.filter-open-more {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  color: #999999;
+}
+.filter-open-more i {
+  margin-left: 5px;
+}
 
 
-
+/* category: currency */
+.form-control {
+  font-family: opensans-reg;
+  font-size: 12px;
+}
+.category-larger-padding .panel-body {
+  padding: 30px;
+}
+.panel-body:nth-last-child(3) {
+  margin-top: 15px;
+}
+.inline-dropdown {
+  display: inline-block;
+  margin-right: 5px;
+}
+.input-group {
+  margin-top: 15px;
+}
+.add-filter-button {
+  float: right;
+  margin-top: 15px;
+}
+.top-space {
+  margin-top: 15px;
+}
 
