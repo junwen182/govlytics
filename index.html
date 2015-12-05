@@ -12,6 +12,7 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/normalize.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/jquery-ui.min.css" rel="stylesheet">
 
     <!-- font awesome -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -115,7 +116,7 @@
         <div class="filters-menu panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
           <div class="filter-category panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#departments" aria-expanded="false" aria-controls="collapseOne">
               <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="filter-category-title">
                     Departments/Agencies/Offices                  
@@ -123,7 +124,7 @@
                 <i class="fa fa-chevron-down"></i>
               </div>
             </a>
-            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div id="departments" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
               <div class="filter-option-search">
                 <input type="text" class="form-control search-box" placeholder="&#xF002;  Search" style="font-family: opensans-reg, FontAwesome" />
               </div><!-- End Search -->
@@ -151,7 +152,7 @@
           </div>
 
           <div class="filter-category category-currency category-larger-padding panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#obligated-amount" aria-expanded="false" aria-controls="collapseTwo">
               <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="filter-category-title">
                   
@@ -161,7 +162,7 @@
                 <i class="fa fa-chevron-down"></i>
               </div>
             </a>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div id="obligated-amount" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body">
 
                 <div class="dropdown inline-dropdown">
@@ -196,7 +197,7 @@
             </div>
           </div>
           <div class="filter-category category-larger-padding panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#vendor" aria-expanded="false" aria-controls="collapseThree">
               <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="filter-category-title">
                   
@@ -206,7 +207,7 @@
                 <i class="fa fa-chevron-down"></i>
               </div>
             </a>
-            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div id="vendor" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
               <div class="panel-body">
 
                 <div class="dropdown inline-dropdown">
@@ -242,20 +243,38 @@
             </div>
           </div>
 
-          <div class="filter-category panel panel-default">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <div class="filter-category category-larger-padding panel panel-default">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#signed-date" aria-expanded="false" aria-controls="collapseFour">
               <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="filter-category-title">
                   
-                    Collapsible Group Item #3
+                    Signed Date
                   
                 </h4>
                 <i class="fa fa-chevron-down"></i>
               </div>
             </a>
-            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+            <div id="signed-date" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
               <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                <div class="dropdown inline-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Include
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Include</a></li>
+                    <li><a href="#">Exclude</a></li>
+                  </ul>
+                </div>
+                <span>rows where <span class="bold">Signed Date</span> is between:</span>
+
+                <input type="text" class="form-control date-picker top-space" id="start-date" placeholder="&#xF073;  Select date" style="font-family: opensans-reg, FontAwesome" />
+                <span class="date-between">-</span>
+                <input type="text" class="form-control date-picker top-space" id="end-date" placeholder="&#xF073;  Select date" style="font-family: opensans-reg, FontAwesome" />
+
+                <button class="small-caps grey-button add-filter-button"><i class="fa fa-plus"></i>ADD FILTER</button>
+
               </div>
             </div>
           </div>
@@ -521,21 +540,38 @@
       <div id="page-content-wrapper">
         <div class="data-table">
           <h1> Hello </h1>
-          <p></p>
-          
+          <div class="arrow_box">
+            <ul class="column-options">          
+              <a href="#">
+                <li>
+                  <i class="fa fa-caret-up"></i><span class="small-caps">SORT ASCENDING</span>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <i class="fa fa-caret-down"></i><span class="small-caps">SORT DESCENDING</span>
+                </li>
+              </a>
+              <a href="#">
+                <li class="hide-column">
+                  <i class="fa fa-eye"></i><span class="small-caps">HIDE COLUMN</span>
+                </li> 
+              </a>
+            </ul>
+          </div>
         </div>
       </div>
 
 
     <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/app.js"></script>
 
     <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
+
+    
+
     </script>
 
   </body>
