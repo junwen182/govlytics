@@ -148,16 +148,33 @@ html, html a {
   width: 100%;
   background-color: #0075BB;
   height: 55px;
-  padding: 17px 30px 0 30px;
+  padding: 0 30px 0 30px;
 }
 .header-nav-logo img {
   width: 190px;
   float: left;
-  /* margin-top: 17px; */
+  margin-top: 17px;
 }
 .header-nav-account {
   float: right;
   /* margin-top: 17px; */
+  height: 55px;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 160px;
+  padding-top: 17px;
+  padding-right: 30px;
+  text-align: right;
+  cursor: pointer;
+  background: rgba(0, 117, 187, 0);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.header-nav-account:hover {
+  background: rgba(0, 117, 187, 100);
 }
 .header-nav-account .account-name {
   display: inline-block;
@@ -201,6 +218,13 @@ html, html a {
   font-family: opensans-semibold;
   width: 150px;
   height: 33px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.grey-button:hover {
+  background: #DEDEDE;
 }
 .grey-button .fa {
   font-size: 13px;
@@ -232,10 +256,20 @@ html, html a {
   padding-top: 10px;
   padding-left: 30px;
   font-family: opensans-reg;
+  cursor: pointer;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.table-options-show-filters:hover {
+  background-color: #FBFBFC;
 }
 .table-options-search {
   width: 280px;
   padding: 6px;
+  position: relative;
 }
 .search-box {
   width: 100%;
@@ -245,11 +279,44 @@ html, html a {
   font-family: opensans-reg;
   font-size: 12px
 }
+.search-icon {
+  position: absolute;
+  top: 7px;
+  background: transparent;
+  border: none;
+  color: #999999;
+  right: 6px;
+  height: 26px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  padding-left: 9px;
+}
+.search-icon:hover > i {
+  color: #4c4c4c;
+}
+.search-icon i {
+  margin-bottom: 2px;
+  font-size: 13px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
 .table-options-show-columns {
   width: 280px;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.table-options-show-columns:hover {
+  background-color: #FBFBFC;
 }
 .show-columns-button {
   padding: 10px 20px;
+  cursor: pointer;
 }
 .table-options-show-columns .dropdown-menu {
   width: 280px;
@@ -260,6 +327,9 @@ html, html a {
 }
 .table-options-show-columns .dropdown-menu .filter-option-search {
   padding: 6px;
+}
+.table-options-show-columns .dropdown-menu .filter-option-search .search-icon {
+  margin: 0;
 }
 .table-options-show-columns .panel-body {
   padding-bottom: 0;
@@ -285,8 +355,7 @@ html, html a {
 .active-filters-bar {
   background-color: #ffffff;
   border-bottom: 1px solid #D7D7D7;
-  height: 42px;
-  padding: 7px 30px 0 30px;
+  padding: 3px 30px;
 }
 .active-filter {
   padding: 3px 10px 6px 15px;
@@ -294,7 +363,15 @@ html, html a {
   border-radius: 40px;
   display: inline-block;
   border: 1px solid #D7D7D7;
-  margin-right: 2px;
+  margin: 3px 2px 3px 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.active-filter:hover {
+  background-color: #DEDEDE;  
 }
 .bold {
   font-family: opensans-bold;
@@ -307,27 +384,21 @@ html, html a {
 
 
 
-/*!
- * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 
-/* Toggle Styles */
+/* Filters slide-in and out */
 
 #wrapper {
     
     height: calc(100% - 214px);
     overflow: auto;
-    position: absolute;
-    top: 214px;
+    
     width: 100%;
 
     padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 #wrapper.toggled {
@@ -343,10 +414,10 @@ html, html a {
     margin-left: -250px;
     overflow-y: auto;
     background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -441,49 +512,8 @@ html, html a {
 }
 
 
-/*
-#wrapper {
-  padding-left: 385px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-#wrapper.toggled {
-  padding-left: 0;
-}
-#sidebar-wrapper {
-  width: 385px;
-  border-right: 1px solid #d7d7d7;
-}
-#wrapper.toggled #sidebar-wrapper {
-  width: 0;
-}
-.filters-menu-wrapper {
-  width: 260px;
-  height: 5000px;
-  z-index: 1000;
-  position: fixed;
-  left: 250px;
-  
-  margin-left: -251px;
-  overflow-y: auto;
-  background: #fff;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-#page-content-wrapper {
-  padding: 20px;
-  position: relative;
-}
-#wrapper.toggled #page-content-wrapper {
-  position: relative;
-  margin-right: 0;
-}
-*/
 
+/* Filters menu */
 .filters-menu {
   width: 385px;
 }
@@ -528,10 +558,14 @@ html, html a {
 .filter-option-search {
   padding: 6px;
   border-top: 1px solid #d7d7d7;
+  position: relative;
 }
 .filter-option-search .search-box {
   margin: 0;
   width: 100%;
+}
+.filter-option-search .search-icon {
+  margin-right: 5px;
 }
 
 
@@ -553,6 +587,14 @@ input.filter-checkbox {
   top: 4px;
   right: 0;
   color: #999999;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.filter-open-more:hover {
+  color: #4C4C4C;
 }
 .filter-open-more i {
   margin-left: 5px;
@@ -634,10 +676,10 @@ input.filter-checkbox {
   padding: 10px 20px 10px 15px;
   width: 100%;
   background-color: #fff;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .column-options li:hover {
   background-color: #FBFBFC;
@@ -665,10 +707,10 @@ input.filter-checkbox {
   left: -1px; */
   display: none;
   opacity: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .filter-agency {
   left: -1px;
