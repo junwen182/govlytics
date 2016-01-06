@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+ <html> 
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <meta name="viewport" content="width=1024">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+
+
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/jquery-ui.min.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+
+
+  <body class="container-non-responsive">
+
+
+    <!-- Header Nav -->
+    <div class="header-nav">
+      <a href="#" class="header-nav-logo"><img src="./img/govlytics-logo.png"></a>
+      <div class="header-nav-account">
+        <p class="account-name small-caps">Peter Parker</p><i class="fa fa-chevron-down"></i>
+      </div>
+    </div><!-- End Header Nav -->
+
+    <!-- Header Control -->
+    <div class="header-control">
+      <div class="header-control-dataset-name chartbuilder-dataset-name">
+        <h1>New Dataset</h1>
+      </div><!-- End Header Control Dataset Name-->
+      
+      <div class="chart-type-button-holder btn-group">
+        <button class="small-caps grey-button variable-width-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-bar-chart"></i>
+          Chart Type: 
+          <span class="chart-type-name small-caps">Bar Chart</span>
+          <span class="caret"></span>
+        </button>
+        <div class="dropdown-menu chart-types-dropdown">          
+          <ul class="column-options">          
+            <a href="#">
+              <li>
+                <i class="fa fa-bar-chart"></i><span class="small-caps">Bar Chart</span>
+              </li>
+            </a>
+            <a href="#">
+              <li>
+                <i class="fa fa-area-chart"></i><span class="small-caps">Area Chart</span>
+              </li>
+            </a>
+            <a href="#">
+              <li>
+                <i class="fa fa-line-chart"></i><span class="small-caps">Line Chart</span>
+              </li>
+            </a>
+            <a href="#">
+              <li>
+                <i class="fa fa-pie-chart"></i><span class="small-caps">Pie Chart</span>
+              </li>
+            </a>                                      
+          </ul>        
+        </div>
+      </div>
+        
+      <div class="header-control-buttons">
+        <button class="small-caps grey-button"><i class="fa fa-cloud-download"></i>EXPORT</button>
+        <button class="small-caps grey-button variable-width-button"><i class="fa fa-plus"></i>ADD TO DASHBOARD</button>
+      </div><!-- End Header Control Buttons -->
+
+    </div><!-- End Header Control -->
+
+
+    <!-- NOTE: consider a LIST for recurring content like active filters and filter categories/options (because) --> 
+    <!-- Filter Menus --> 
+    <div id="wrapper" class="chartbuilder">
+
+      <div class="filters-menu-wrapper chartbuilder-options-wrapper" id="sidebar-wrapper">
+
+        <div class="filters-menu panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+          <div class="filter-category category-chart-options panel panel-default">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#departments" aria-expanded="false" aria-controls="collapseOne">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="filter-category-title">
+                    Chart Options                  
+                </h4>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+            </a>
+            <div id="departments" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+              
+              <div class="panel-body">
+                
+                <!-- Date card -->
+                <div class="chart-options-card chart-options-date-card">
+                  <div class="chart-options-card-header">                  
+                    <span>Date</span>
+                  </div> 
+                  <div class="chart-options-card-body">
+                    <!-- Data item -->
+                    <div class="data-item">
+                      <div class="data-symbol-holder">
+                        <i class="fa fa-bar-chart"></i>
+                      </div>
+                      <div class="data-name-holder">
+                        <span class="data-name">
+                          Signed Date
+                        </span>
+                        <i class="remove-data fa fa-times"></i>
+                      </div>
+                    </div>
+                    <!-- Filter area -->
+                    <div class="chart-options-filter-holder">
+                      <i class="fa fa-filter"></i><span class="small-caps">ADD FILTER</span>
+                    </div>
+                    <!-- Grouped by -->
+                    <div class="dropdown inline-dropdown full-width-dropdown-holder">
+                      <button class="full-width-dropdown-btn btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Grouped by: Year
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Grouped by: Month</a></li>
+                        <li><a href="#">Grouped by: Day</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Column height card -->            
+                <div class="chart-options-card chart-options-columnheight-card">
+                  <div class="chart-options-card-header">                  
+                    <span>Column Height</span>
+                  </div> 
+                  <div class="chart-options-card-body">
+                    <!-- Grouped by -->
+                    <div class="dropdown inline-dropdown full-width-dropdown-holder">
+                      <button class="full-width-dropdown-btn btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Sum of:
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Grouped by: Month</a></li>
+                        <li><a href="#">Grouped by: Day</a></li>
+                      </ul>
+                    </div>
+                    <!-- Data item -->
+                    <div class="data-item">
+                      <div class="data-symbol-holder">
+                        <i class="fa fa-bar-chart"></i>
+                      </div>
+                      <div class="data-name-holder">
+                        <span class="data-name">
+                          Obligated Amount
+                        </span>
+                        <i class="remove-data fa fa-times"></i>
+                      </div>
+                    </div>
+                    <!-- Filter area -->
+                    <div class="chart-options-filter-holder">
+                      <i class="fa fa-filter"></i><span class="small-caps">ADD FILTER</span>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- Categories card -->              
+                <div class="chart-options-card chart-options-brokendownby-card">
+                  <div class="chart-options-card-header">                  
+                    <span>Columns Droken Down By:</span>
+                  </div> 
+                  <div class="chart-options-card-body">
+                    <!-- Data item -->
+                    <div class="data-item">
+                      <div class="data-symbol-holder">
+                        <i class="fa fa-bar-chart"></i>
+                      </div>
+                      <div class="data-name-holder">
+                        <span class="data-name">
+                          Agency
+                        </span>
+                        <i class="remove-data fa fa-times"></i>
+                      </div>
+                    </div>        
+
+                    <!-- List of categories -->
+                    <div class="brokendownby-holder">
+                      <ul>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                        <li>
+                          <div class="checkbox-color-label"></div>
+                          <input id="brokendownby-checkbox" type="checkbox">
+                          <label for="brokendownby-checkbox" class="brokendownby-name">2001: Department of Agriculture</label>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- # categories to show -->          
+                    
+                    <!-- Order -->
+                    <div class="dropdown inline-dropdown full-width-dropdown-holder">
+                      <button class="full-width-dropdown-btn btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Order: A - Z
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Order: A - Z</a></li>
+                        <li><a href="#">Order: Z - A</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-category category-add-data panel panel-default">
+            <!-- Panel header -->
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#obligated-amount" aria-expanded="true" aria-controls="collapseTwo">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="filter-category-title">
+                  
+                    Add Data to Chart
+                  
+                </h4>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+            </a>
+            <!-- Panel collapsible body -->
+            <div id="obligated-amount" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Obligated Amount
+                    </span>
+                  </div>
+                </div>
+
+                <!--
+                <div class="dropdown inline-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Include
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Include</a></li>
+                    <li><a href="#">Exclude</a></li>
+                  </ul>
+                </div>
+
+                <span>rows where <span class="bold">Obligated Amount</span> is:</span>
+
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Greater than (>) <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">less than (<)</a></li>
+                      <li><a href="#">greater than or equal to (>=)</a></li>
+                      <li><a href="#">less than or equal to (<=)</a></li>
+                      <li><a href="#">between</a></li>
+                    </ul>
+                  </div>
+                  <input type="text" class="form-control" aria-label="...">
+                </div>
+
+                <button class="small-caps grey-button add-filter-button"><i class="fa fa-plus"></i>ADD FILTER</button>
+                -->
+
+              </div> <!-- end panel body content -->
+            </div> <!-- end collapsible panel -->
+          </div> <!-- End Filter Category -->
+          
+
+        </div> <!-- End Filter Menu Accordion -->
+
+      </div><!-- End Filters menu Wrapper -->
+
+
+      <!-- Table -->
+      <div id="page-content-wrapper">              
+
+
+      </div>
+
+
+      
+
+
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+
+    <script>
+
+    
+
+    </script>
+
+  </body>
+
+</html>
