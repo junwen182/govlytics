@@ -782,6 +782,11 @@ input.filter-checkbox {
 .variable-width-button .caret {
   margin-left: 30px;
 }
+.filter-category .panel-heading .filter-category-name {
+  color: #4C4C4C;
+  float: none;
+  margin-right: 5px;
+}
 
 
 #wrapper.chartbuilder {
@@ -961,8 +966,12 @@ input[type="checkbox"] + label:before {
 }
     
 input[type="checkbox"]:checked + label:before {
-    content: '\2714';
+    font-family: FontAwesome;
+    content: "\f00c";
     color: #4c4c4c;
+    font-size: 14px;
+    position: relative;
+    bottom: 2px;
 }
 
 .checkbox-color-label {
