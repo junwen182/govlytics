@@ -927,6 +927,12 @@ input.filter-checkbox {
   border-radius: 3px;
   padding: 12px 10px 8px 10px;
   margin: 10px 0 11px 0;
+  height: 340px;
+  overflow: scroll;
+  overflow-x: scroll;
+}
+.brokendownby-holder ul {
+  width: 300px;
 }
 .brokendownby-holder ul li {
   margin-bottom: 5px;
@@ -934,6 +940,30 @@ input.filter-checkbox {
 .brokendownby-holder ul li:last-child {
   margin-bottom: 0;
 }
+.chart-options-card-body .categories-to-show {
+  padding: 5px 7px 28px 7px;
+  margin-top: 0;
+}
+.chart-options-card-body .categories-to-show .ui-slider {
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+.categories-counter {
+  margin-bottom: 10px;
+}
+.categories-to-show .filter-start-value {
+  float: left;
+  position: relative;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+.categories-to-show .filter-end-value {
+  float: right;
+  position: relative;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+
 
 input[type="checkbox"] {
     display: none;
@@ -980,4 +1010,110 @@ input[type="checkbox"]:checked + label:before {
   background-color: #444a59;
   border-radius: 3px 0 0 3px;
   display: inline-block;
+}
+
+
+/* Chart Builder = Filter Modals
+=================================================== */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 1001;
+}
+
+
+.filter-modal {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 540px;
+  background-color: #fff;
+  z-index: 1002;
+  border-radius: 3px;
+  margin: auto;  
+  height: 322px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.filter-modal-heading {
+  width: 100%;
+  padding: 35px 0 10px 0;
+  text-align: center;
+}
+.filter-modal-heading span {
+  font-size: 23px;
+}
+.filter-modal .close-button {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  cursor: pointer;
+}
+.filter-modal .date-picker {
+  margin: 0 5px;
+}
+.date-chooser-holder {
+  text-align: center;
+}
+.filter-modal-buttons {
+  text-align: right;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.blue-button {
+  background: #0075BB;
+  border-radius: 3px;
+  color: #fff;
+  font-family: opensans-semibold;
+  width: 150px;
+  height: 33px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.blue-button:hover {
+  background: #005E96;
+}
+
+
+.slider-filter-holder {
+  padding: 20px 30px 40px;
+  position: relative;
+  margin-top: 30px;
+}
+.slider-filter-holder .ui-slider-range {
+  background-color: #0075BB;
+}
+.slider-filter-holder .ui-slider {
+  height: 5px;
+  border-radius: 8px;
+  background: #d7d7d7;
+  border: none;
+  width: 90%;
+  margin: 0 auto;
+}
+.filter-start-value {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  font-size: 11px;
+}
+.filter-end-value {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  text-align: right;
+  font-size: 11px;
+}
+.date-chooser-holder {
+  margin-bottom: 30px;
 }
