@@ -913,7 +913,10 @@ input.filter-checkbox {
 }
 .chart-options-filter-holder i {
   font-size: 13px;
-  margin-right: 8px;
+  margin-right: 5px;
+}
+.filter-status {
+  margin-left: 8px;
 }
 
 
