@@ -822,6 +822,16 @@ input.filter-checkbox {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+.data-type-currency-icon {
+  position: relative;
+  left: 5px;
+  top: 1px;
+}
+.data-type-date-icon {
+  position: relative;
+  left: 2px;
+  top: 1px;
+}
 .data-item-draggable {
   margin-bottom: 8px;
   background-color: #FBFBFC;
@@ -840,6 +850,12 @@ input.filter-checkbox {
   background-color: #0075BB;
   color: #fff;
   padding: 8px;
+}
+.data-symbol-holder img {
+  width: 13px;
+  position: relative;
+  top: 2px;
+  left: 3px;
 }
 .data-name-holder {
   display: inline-block;
@@ -867,8 +883,7 @@ input.filter-checkbox {
 
 .chart-options-card {
   border: 1px solid #ccc;
-  border-radius: 3px;
-  overflow: hidden;
+  border-radius: 3px;  
   margin-bottom: 18px;
 }
 .chart-options-card-header {
@@ -882,6 +897,12 @@ input.filter-checkbox {
 }
 .chart-options-card-body {
   padding: 11px;
+}
+.dropdown .menu-above {
+  top: -200%;
+}
+.sort-dropdown {
+  margin-top: 11px;
 }
 
 
@@ -972,7 +993,7 @@ input[type="checkbox"] {
 input[type="checkbox"] + label:before {
     border-radius: 0 3px 3px 0;
     position: relative;
-    bottom: 0px;
+    bottom: 2px;
     right: 5px;
     content: '\00a0';
     display: inline-block;
@@ -986,6 +1007,7 @@ input[type="checkbox"] + label:before {
     text-align: center;
     cursor: pointer;  
     margin-right: 3px;
+    vertical-align: middle;
 }   
 .brokendownby-name {
   font-family: opensans-reg;
@@ -1004,6 +1026,10 @@ input[type="checkbox"]:checked + label:before {
     top: -2px ;
 }
 
+.brokendownby-name:before {
+  padding-top: 2px; 
+}
+
 .checkbox-color-label {
   width: 20px;
   height: 20px;
@@ -1013,7 +1039,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 
-/* Chart Builder = Filter Modals
+/* Chart Builder Filter Modals
 =================================================== */
 
 .overlay {

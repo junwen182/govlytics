@@ -100,6 +100,43 @@
               
               <div class="panel-body">
                 
+                <!-- Column height card -->            
+                <div class="chart-options-card chart-options-columnheight-card">
+                  <div class="chart-options-card-header">                  
+                    <span>Column Height</span>
+                  </div> 
+                  <div class="chart-options-card-body">
+                    <!-- Grouped by -->
+                    <div class="dropdown inline-dropdown full-width-dropdown-holder">
+                      <button class="full-width-dropdown-btn btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Sum of:
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Average of:</a></li>
+                        <li><a href="#">Sum of:</a></li>
+                      </ul>
+                    </div>
+                    <!-- Data item -->
+                    <div class="data-item">
+                      <div class="data-symbol-holder">
+                        <i class="fa fa-usd data-type-currency-icon"></i>
+                      </div>
+                      <div class="data-name-holder">
+                        <span class="data-name">
+                          Obligated Amount
+                        </span>
+                        <i class="remove-data fa fa-times"></i>
+                      </div>
+                    </div>
+                    <!-- Filter area -->
+                    <div class="chart-options-filter-holder">
+                      <i class="fa fa-filter"></i><span class="small-caps">ADD FILTER</span>
+                    </div>
+                    
+                  </div>
+                </div>
+
                 <!-- Date card -->
                 <div class="chart-options-card chart-options-date-card">
                   <div class="chart-options-card-header">                  
@@ -109,7 +146,7 @@
                     <!-- Data item -->
                     <div class="data-item">
                       <div class="data-symbol-holder">
-                        <i class="fa fa-bar-chart"></i>
+                        <i class="fa fa-calendar-o data-type-date-icon"></i>
                       </div>
                       <div class="data-name-holder">
                         <span class="data-name">
@@ -129,49 +166,24 @@
                         <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">Grouped by: Month</a></li>
-                        <li><a href="#">Grouped by: Day</a></li>
+                        <li><a href="#">Year</a></li>
+                        <li><a href="#">Month</a></li>
+                        <li><a href="#">Day</a></li>
                       </ul>
                     </div>
-                  </div>
-                </div>
-
-                <!-- Column height card -->            
-                <div class="chart-options-card chart-options-columnheight-card">
-                  <div class="chart-options-card-header">                  
-                    <span>Column Height</span>
-                  </div> 
-                  <div class="chart-options-card-body">
                     <!-- Grouped by -->
-                    <div class="dropdown inline-dropdown full-width-dropdown-holder">
+                    <div class="dropdown inline-dropdown full-width-dropdown-holder sort-dropdown">
                       <button class="full-width-dropdown-btn btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Sum of:
+                        Sort by: Most Recent to Oldest
                         <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">Grouped by: Month</a></li>
-                        <li><a href="#">Grouped by: Day</a></li>
+                        <li><a href="#">Most Recent to Oldest</a></li>
+                        <li><a href="#">Oldest to Most Recent</a></li>
                       </ul>
                     </div>
-                    <!-- Data item -->
-                    <div class="data-item">
-                      <div class="data-symbol-holder">
-                        <i class="fa fa-bar-chart"></i>
-                      </div>
-                      <div class="data-name-holder">
-                        <span class="data-name">
-                          Obligated Amount
-                        </span>
-                        <i class="remove-data fa fa-times"></i>
-                      </div>
-                    </div>
-                    <!-- Filter area -->
-                    <div class="chart-options-filter-holder">
-                      <i class="fa fa-filter"></i><span class="small-caps">ADD FILTER</span>
-                    </div>
-                    
                   </div>
-                </div>
+                </div>                
 
                 <!-- Categories card -->              
                 <div class="chart-options-card chart-options-brokendownby-card">
@@ -182,7 +194,7 @@
                     <!-- Data item -->
                     <div class="data-item">
                       <div class="data-symbol-holder">
-                        <i class="fa fa-bar-chart"></i>
+                        <img src="./img/text-icon.png">
                       </div>
                       <div class="data-name-holder">
                         <span class="data-name">
@@ -197,8 +209,8 @@
                       <ul>
                         <li>
                           <div class="checkbox-color-label"></div>
-                          <input id="brokendownby-checkbox-1" type="checkbox">
-                          <label for="brokendownby-checkbox-1" class="brokendownby-name">2001: Department of Agriculture</label>
+                          <input id="brokendownby-checkbox-0" type="checkbox">
+                          <label for="brokendownby-checkbox-0" class="brokendownby-name">Check/Uncheck All</label>
                         </li>
                         <li>
                           <div class="checkbox-color-label"></div>
@@ -256,6 +268,7 @@
                           <label for="brokendownby-checkbox-11" class="brokendownby-name">2001: Department of Agriculture</label>
                         </li>
                       </ul>
+
                     </div>
 
                     <!-- # categories to show -->
@@ -272,7 +285,7 @@
                         Order: A - Z
                         <span class="caret"></span>
                       </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <ul class="dropdown-menu menu-above" aria-labelledby="dropdownMenu1">
                         <li><a href="#">Order: A - Z</a></li>
                         <li><a href="#">Order: Z - A</a></li>
                       </ul>
@@ -302,7 +315,7 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -314,7 +327,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -326,7 +363,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -338,7 +399,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -350,7 +435,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -362,7 +471,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -374,7 +507,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -386,7 +543,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -398,7 +579,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -410,7 +615,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -422,7 +651,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -434,7 +687,31 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Signed Date
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <img src="./img/text-icon.png">
+                  </div>
+                  <div class="data-name-holder">
+                    <span class="data-name">
+                      Department
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Data item -->
+                <div class="data-item data-item-draggable">
+                  <div class="data-symbol-holder">
+                    <i class="fa fa-usd data-type-currency-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
@@ -446,11 +723,11 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <i class="fa fa-calendar-o data-type-date-icon"></i>
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
-                      Obligated Amount
+                      Signed Date
                     </span>
                   </div>
                 </div>
@@ -458,155 +735,11 @@
                 <!-- Data item -->
                 <div class="data-item data-item-draggable">
                   <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
+                    <img src="./img/text-icon.png">
                   </div>
                   <div class="data-name-holder">
                     <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Data item -->
-                <div class="data-item data-item-draggable">
-                  <div class="data-symbol-holder">
-                    <i class="fa fa-bar-chart"></i>
-                  </div>
-                  <div class="data-name-holder">
-                    <span class="data-name">
-                      Obligated Amount
+                      Department
                     </span>
                   </div>
                 </div>
